@@ -1,9 +1,8 @@
-
 // on body tag 
 function startGame() {
     // 1 establish default 1st turn 
     document.turn = "👽";
-// 2 display this message and switch it based on who's turn it is 
+    // 2 display this message and switch it based on who's turn it is 
     setMessage(document.turn + " is up next!")
 }
 // 3 where that message gets displayed?
@@ -28,13 +27,13 @@ function nextMove(square) {
 function switchTurn() {
     if (checkForWinner(document.turn)) {
         setMessage("You win  " + document.turn + "  good job! (•‿•) ")
-    }else if (document.turn == "👽") {
+    } else if (document.turn == "👽") {
         document.turn = "🚀";
         setMessage("It's currently " + document.turn + " 's turn!  ☚")
     } else {
         document.turn = "👽";
-    setMessage("It's currently " + document.turn + " 's turn!  ☚")
-}
+        setMessage("It's currently " + document.turn + " 's turn!  ☚")
+    }
 }
 
 // how winner is checked for 
@@ -52,19 +51,19 @@ function checkForWinner(move) {
         checkRow(3, 5, 7, move)) {
         result = true;
     }
-        return result;
-    }
+    return result;
+}
 
 // how the check row is recided if true or false 
-    function checkRow(a, b, c, move) {
-        var result = false;
-        if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
-            result = true;
-        }
-        return result;
+function checkRow(a, b, c, move) {
+    var result = false;
+    if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
+        result = true;
     }
+    return result;
+}
 //display winner message 
 // winning combos based on each "td" id ex s3 = s + 3 
-    function getBox(number) {
-        return document.getElementById("s" + number).innerText;
-    }
+function getBox(number) {
+    return document.getElementById("s" + number).innerText;
+}
