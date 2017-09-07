@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>TTT</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <style>
+        .square {
+            height: 91px;
+            width: 91px;
+            font-size: 40pt;
+            text-align: center;
+            background-color: #429588;
+        }
+        
+        body {
+            background-color: #BDE0DA;
+            font-family: 'Caveat', cursive;
+            font-size: 32px;
+        }
+        
+        #wrap {
+            width: 600px;
+            margin: 0 auto;
+        }
+        
+        #left_col {
+            float: left;
+            width: 300px;
+            padding-top: 10px;
+        }
+        
+        #right_col {
+            float: right;
+            width: 300px;
+            padding-top: 18px;
+        }
+        
+        button {
+            font-family: 'Caveat', cursive;
+            font-size: 14px;
+            background-color: #429588;
+            padding: 20px;
+            text-decoration: none;
+        }
+        
+        button:hover {
+            background-color: #1e4841;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body onload=startGame();>
+    <div id="wrap">
+
+
+        <div align="center">
+            <br> 👽 vs 🚀
+            <hr width="44%">
+            <div id="message">Messages here</div>
+            <br>
+            <button><a href="javascript:history.go(0)"> RESET</a></button>
+        </div>
+        <br>
+        <div id="left_col">
+            <img src="images/ttt.gif" align="center" width="300px">
+        </div>
+
+        <div id="right_col">
+            <table border="2px" align="center">
+                <tr>
+                    <td class="square" id="s1" onClick="nextMove(this)"></td>
+                    <td class="square" id="s2" onClick="nextMove(this)"></td>
+                    <td class="square" id="s3" onClick="nextMove(this)"></td>
+                </tr>
+                <tr>
+                    <td class="square" id="s4" onClick="nextMove(this)"></td>
+                    <td class="square" id="s5" onClick="nextMove(this)"></td>
+                    <td class="square" id="s6" onClick="nextMove(this)"></td>
+                </tr>
+                <tr>
+                    <td class="square" id="s7" onClick="nextMove(this)"></td>
+                    <td class="square" id="s8" onClick="nextMove(this)"></td>
+                    <td class="square" id="s9" onClick="nextMove(this)"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="ttt.js">
+
+
+    </script>
+</body>
+
+</html>
