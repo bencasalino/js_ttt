@@ -67,3 +67,6 @@ function checkRow(a, b, c, move) {
 function getBox(number) {
     return document.getElementById("s" + number).innerText;
 }
+
+
+// test commit 
